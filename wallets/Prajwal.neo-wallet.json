@@ -1,0 +1,29 @@
+{
+  "name": "Prajwal",
+  "version": "1.0",
+  "scrypt": {
+    "n": 16384,
+    "r": 8,
+    "p": 8,
+    "size": 64
+  },
+  "accounts": [
+    {
+      "address": "NhZbXeSWWcVNtmw5tbE4VNMtPUnCrxjeVB",
+      "label": "Default account",
+      "isDefault": true,
+      "lock": false,
+      "key": "6PYTgtabKUUtKxKpLA7s8vpGPnuuwQuTVjgFqgU5Xv5Np74myc5uCZx7db",
+      "contract": {
+        "script": "DCEDOO+oXcuIQImSxCG490XkNau3Q4m0bKKFYw3uJTdb6S1BVuezJw==",
+        "parameters": [
+          {
+            "name": "signature",
+            "type": "Signature"
+          }
+        ],
+        "deployed": false
+      }
+    }
+  ]
+}

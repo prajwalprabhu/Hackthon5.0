@@ -1,0 +1,3 @@
+back/dist/*
+contracts/Content/src/obj/*
+back/node_modules/
