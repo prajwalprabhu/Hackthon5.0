@@ -27,13 +27,6 @@ function Signup({ signed }) {
       pkey.current.value = "";
     }
   };
-  useEffect(() => {
-    if (window.ethereum) {
-      console.log("eth present");
-    } else {
-      console.log("eth not present");
-    }
-  }, []);
   return (
     <div className="m-4">
       <div className="credit-card w-full lg:w-1/2 sm:w-auto shadow-lg mx-auto rounded-xl bg-white">

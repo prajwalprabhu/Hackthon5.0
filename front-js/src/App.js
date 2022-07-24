@@ -10,8 +10,8 @@ function App() {
       alert("Metamask not found");
     }
   }, []);
-  let [logged, setLogged] = useState(false);
-  let [signup, setsignup] = useState(true);
+  // let [logged, setLogged] = useState(false);
+  // let [signup, setsignup] = useState(true);
   return (
     // <div>
     //   {!logged && (

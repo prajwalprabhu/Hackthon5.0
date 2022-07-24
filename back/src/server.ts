@@ -17,12 +17,12 @@ app.post("/login", async (req, res) => {
 
   let saved_data = await getData(data.pkey);
   if (saved_data == null) {
-    res.json({ error: 1 });
+    res.json({ error: 1 }); //user not found
   } else {
     if (saved_data.name === data.name && saved_data.pswd === data.pswd) {
-      res.json({ error: 0 });
+      res.json({ error: 0 }); // user confirmed
     } else {
-      res.json({ error: 2 });
+      res.json({ error: 2 }); //wrong password || name 
     }
   }
 });
@@ -39,9 +39,7 @@ app.post("/signup", async (req, res) => {
     res.json({ error: 1 });
   }
 });
-app.get("/", (req, res) => {
-  res.send("Hello");
-});
+
 app.get("/getdata", async (req, res) => {
   let data = req.body;
   let _data = await getData(data.pkey);

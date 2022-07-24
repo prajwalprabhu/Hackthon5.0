@@ -22,8 +22,9 @@ function Login({ logged }) {
     } else if (res_json.error === 1) {
       logged(false);
     } else if (res_json.error === 2) {
-      alert("Wrong password");
+      alert("Wrong password or name");
       pswd.current.value = "";
+      name.current.value = "";
     }
   };
 
