@@ -18,14 +18,7 @@ namespace Content
 	{
 		private static Transaction Tx => (Transaction)Runtime.ScriptContainer;
 
-		public void SetHello()
-		{
-			Storage.Put(Storage.CurrentContext, "Hi", "Hello");
-		}
-		public string GetHello()
-		{
-			return (string)Storage.Get(Storage.CurrentContext, "Hi");
-		}
+		
 		public void StoreCreator(UInt160 from, long amt)
 		{
 			string data = Storage.Get(Storage.CurrentContext, Tx.Sender);
@@ -67,9 +60,7 @@ namespace Content
 			}
 			else
 			{
-				string Data = amt.ToString(
-
-				).Insert(0, "\t").Insert(0, to.ToString().Insert(0, "\n"));
+				string Data = amt.ToString().Insert(0, "\t").Insert(0, to.ToString().Insert(0, "\n"));
 				Storage.Put(Storage.CurrentContext, Tx.Sender, Data);
 			}
 		}

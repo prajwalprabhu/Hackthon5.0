@@ -1,10 +1,10 @@
 import mongoose, { mongo } from "mongoose";
 import { User } from "./model";
-const USER = process.env.USER || "prajwalprabhu";
-const PSWD = process.env.PSWD || "82Bw7uDV6FOu3Tjr";
+// const USER = process.env.USER;
+// const PSWD = process.env.PSWD;
 export async function connectDb() {
   await mongoose.connect(
-    `mongodb+srv://prajwalprabhu:${PSWD}@cluster0.ifmhy.mongodb.net/?retryWrites=true&w=majority`
+    `mongodb+srv://prajwalprabhu:82Bw7uDV6FOu3Tjr@cluster0.ifmhy.mongodb.net/?retryWrites=true&w=majority`
   );
   mongoose.createConnection;
 }
@@ -29,5 +29,4 @@ export async function addData(data: {
     isConsumer: data.isConsumer,
     isCreator: data.isCreator,
   });
-  
 }

@@ -23,6 +23,8 @@ function Signup({ signed }) {
     } else if (res_json.error == 1) {
       alert("User name exists");
       name.current.value = "";
+      pswd.current.value = "";
+      pkey.current.value = "";
     }
   };
   useEffect(() => {
