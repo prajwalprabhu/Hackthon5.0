@@ -1,10 +1,10 @@
 import mongoose, { mongo } from "mongoose";
 import { User } from "./model";
-// const USER = process.env.USER;
-// const PSWD = process.env.PSWD;
+const USER = process.env.USER;
+const PSWD = process.env.PSWD;
 export async function connectDb() {
   await mongoose.connect(
-    `mongodb+srv://prajwalprabhu:82Bw7uDV6FOu3Tjr@cluster0.ifmhy.mongodb.net/?retryWrites=true&w=majority`
+    `mongodb+srv://${USER}:${PSWD}@cluster0.ifmhy.mongodb.net/?retryWrites=true&w=majority`
   );
   mongoose.createConnection;
 }
